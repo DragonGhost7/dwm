@@ -16,7 +16,7 @@ index 4465af1..3d0eac4 100644
 
  	if ((w = m->ww - sw - x) > bh) {
  		if (m->sel) {
-+			int mid = (m->ww - TEXTW(m->sel->name)) / 2 - x;
++			int mid = (m->ww - x - tw - TEXTW(m->sel->name)) / 2;
 +			/* make sure name will not overlap on tags even when it is very long */
 +			mid = mid >= lrpad / 2 ? mid : lrpad / 2;
  			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
