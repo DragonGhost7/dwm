@@ -1,5 +1,6 @@
 # dwm - dynamic window manager
 ============================
+
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 My slight modifications. No bork.
@@ -27,7 +28,8 @@ necessary as root):
 ## Running dwm
 -----------
 Check my dots, i run dwm thru `startx`
-[dots](https://github.com/DragonGhost7/dotfiles)
+
+My [dots](https://github.com/DragonGhost7/dotfiles)
 
 ## Configuration
 -------------
