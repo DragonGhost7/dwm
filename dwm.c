@@ -952,6 +952,8 @@ drawbar(Monitor *m)
 	if ((w = m->ww - tw - x) > bh) {
 		if (m->sel) {
 			int mid = (m->ww - x - tw - TEXTW(m->sel->name)) / 2;
+			/* make sure that mid point doesnt get below 0 (haha gandhi civ joke,which it does with long titles) */
+			mid = mid <= m->ww ? mid : 0;
 			/* make sure name will not overlap on tags even when it is very long */
 			mid = mid >= lrpad / 2 ? mid : lrpad / 2;
 			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
