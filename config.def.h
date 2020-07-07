@@ -16,7 +16,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char statussep         = ';';      /*  separator between status bars */
-static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true", "Material Design Icons:Regular:pixelsize=16:antialias:true"};
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -63,9 +63,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "󰕲"",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "󱒆"",      monocle },
 	{ NULL,       NULL },
 };
 
