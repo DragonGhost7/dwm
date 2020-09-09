@@ -1,6 +1,6 @@
 # Maintainer: Me lmao
 pkgname="dwm"
-pkgver=r1727.4e8585b
+pkgver=r1729.241e0dc
 pkgrel=1
 pkgdesc="dynamic window manager for X"
 arch=('x86_64')
