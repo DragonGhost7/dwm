@@ -16,7 +16,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char statussep         = ';';      /*  separator between status bars */
-static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true", "Material Design Icons:Regular:pixelsize=16:antialias:true"};
+static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true", "Material Design Icons Desktop:Regular:pixelsize=16:antialias:true"};
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,          0,             0,        -1 },
 	{   NULL   ,  NULL,    "neomutt",     1 << 3,       0,          0,             0,         -1 },
 	{"Brave-browser", NULL,   NULL,       1 << 1,       0,          0,             0,         -1 },
+	{"Firefox", NULL,   NULL,       1 << 1,       0,          0,             0,         -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,          0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 
