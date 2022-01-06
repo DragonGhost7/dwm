@@ -1,0 +1,10 @@
+#!/bin/sh
+dmenu="dmenu -l 10 -c -n -fn Hack-14 "
+
+playerctl -a pause
+p=$(playerctl -l | $dmenu)
+if [ $p ];then
+echo $p > ~/.cache/current_player
+fi
+# playerctl -p $(cat ~/.cache/current_player) play
+

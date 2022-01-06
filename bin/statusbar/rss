@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export IDENTIFIER="unicode"
+
+rssupdate () {
+if [ "$IDENTIFIER" = "unicode" ]; then
+	printf "🗞 %s items unread\n" "$( sqlite3 ~/.newsboat/cache.db 'select unread from rss_item' | grep 1 | wc -l)"
+else
+	printf "RSS %s\n items unread" "$( sqlite3 ~/.newsboat/cache.db 'select unread from rss_item' | grep 1 | wc -l)"
+fi
+}
+
+rssupdate

@@ -1,0 +1,3 @@
+#!/bin/sh
+kill -44 $(pidof dwmblocks)
+dunstify -i /usr/share/icons/Moka/96x96/mimetypes/application-rss+xml.png "$@"

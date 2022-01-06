@@ -1,0 +1,4 @@
+#!/bin/sh
+
+playerctl -p $(cat ~/.cache/current_player) metadata -f "{{status}} {{artist}} - {{title}}" | sed  "s/Paused/⏸/g" | sed  "s/Playing/▶/g"
+

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+newsboat -x reload
+unread=$(sqlite3 /home/darkghost/.newsboat/cache.db "select unread from rss_item" | grep 1 | wc -l)
+feeds=$(sqlite3 /home/darkghost/.newsboat/cache.db "select distinct feedurl from rss_item where unread=1" | wc -l)
+if ! [ $unread -eq 0 ]
+then
+	kill -44 $(pidof dwmblocks)
+	/usr/bin/dunstify -i /usr/share/icons/Moka/96x96/mimetypes/application-rss+xml.png "RSS feed reloaded,
+$feeds unread feeds
+($unread unread articles total)"
+fi
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# This loop will update the mpd statusbar module whenever a command changes the
+# music player's status. mpd must be running on X's start for this to work.
+
+if ! [ -z $DISPLAY ]; then
+while : ; do
+	dbus-monitor " sender=org.mpris.MediaPlayer2.spotify,member='PropertiesChanged'" | grep -q PropertiesChanged && kill -45 $(pidof "dwmblocks") || break
+done
+else
+	echo "no display yet"
+fi
+
+

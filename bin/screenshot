@@ -1,0 +1,7 @@
+#!/bin/bash
+choice=$(printf "save\\nclipboard copy" | dmenu -p "How to save the screenshot?")
+case "$choice" in
+	save) maim -s /home/$USER/Pictures/Screenshots/screenshot-$(date +%F-%H:%M:%S).jpg ;;
+	"clipboard copy") maim -s | xclip -selection clipboard -t image/png ;;
+esac
+

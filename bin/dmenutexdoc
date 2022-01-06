@@ -1,0 +1,4 @@
+#/bin/sh
+dmenu="dmenu -i -l 30 -fn inconsolata-14"
+ls /usr/share/texmf-dist/doc/latex | $dmenu | xargs -r  texdoc
+

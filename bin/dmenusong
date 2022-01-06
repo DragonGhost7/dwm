@@ -1,0 +1,3 @@
+#!/bin/sh
+dmenu="dmenu -l 30 -fn Hack-14 "
+mpc playlist -f "%artist% - %title%" | $dmenu | awk -F "- " '{print $NF}' | sed -e 's/^/"/g' -e 's/$/"/g' | xargs -r mpc searchplay title
