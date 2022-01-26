@@ -16,7 +16,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char statussep         = ';';      /*  separator between status bars */
-static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true","Material Design Icons:Regular:pixelsize=16:antialias:true" };
+static const char *fonts[]          = { "monospace:size=9","JoyPixels:pixelsize=10:antialias=true:autohint=true", "Material Design Icons:Regular:pixelsize=16:antialias:true"};
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -66,10 +66,6 @@ static const Layout layouts[] = {
 	{ "󰕲",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "󱒆",      monocle },
-	{ "󱒅",      centeredmaster },
-	{ "󰕬",      centeredfloatingmaster },
- 	{ "[@]",      spiral },
- 	{ "󰕴",      dwindle },
 	{ NULL,       NULL },
 };
 
@@ -119,11 +115,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
-	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
