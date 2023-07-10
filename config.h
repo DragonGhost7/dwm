@@ -16,8 +16,8 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;   /* 0 means no systray */
 static const char statussep         = ';';      /*  separator between status bars */
-/* static const char *fonts[]          = { "monospace:Regular:size=9","Inconsolata Nerd Font Mono:antialias=true:autohint=true", "Material Design Icons Desktop:pixelsize=16:antialias:true"}; */
-static const char *fonts[]          = { "monospace:Regular:size=9"};
+static const char *fonts[]          = { "monospace:Regular:size=9","Inconsolata Nerd Font Mono:antialias=true:autohint=true", "Material Design Icons Desktop:pixelsize=16:antialias:true"};
+/* static const char *fonts[]          = { "monospace:Regular:size=9"}; */
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -102,7 +102,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static Key keys[] = {
+static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	/* { MODKEY|ShiftMask,             XK_d,      spawn,          {.v = dmenucmd } }, */
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
@@ -159,7 +159,7 @@ static Key keys[] = {
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
-static Button buttons[] = {
+static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
